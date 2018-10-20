@@ -1,4 +1,4 @@
-from interface import Interface
+from interface import Interface, interface
 from enums.Rarity import Rarity
 
 import random
@@ -6,6 +6,7 @@ import random
 
 class Equipment(Interface):
 
+    @interface.default
     def __init__(self, full_import):
         self.rarity = ""
         self.equipment_name = ""
@@ -17,10 +18,12 @@ class Equipment(Interface):
             return
         self.initialise_equipment()
 
+    @interface.default
     def initialise_equipment(self):
         self.initialise_rarity()
         self.initialise_name()
 
+    @interface.default
     def initialise_rarity(self):
         rarity = ([Rarity.common] * Rarity.common.value[1]) + ([Rarity.uncommon] * Rarity.uncommon.value[1]) \
                  + ([Rarity.rare] * Rarity.rare.value[1]) + ([Rarity.legendary] * Rarity.legendary.value[1])
@@ -35,6 +38,3 @@ class Equipment(Interface):
 
     def initialise_stats_and_attributes(self):
         pass
-
-
-test = Equipment(False)

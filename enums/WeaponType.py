@@ -17,8 +17,8 @@ class WeaponType(Enum):
     """
     value: index , possible stats, possible attributes
     """
-    two_handed_sword = 0, MELEE, MELEE_ATTR
-    one_handed_sword = 1, MELEE, MELEE_ATTR
-    dagger = 2, MELEE, MELEE_ATTR
-    staff = 3, MAGIC, MAGIC_ATTR
-    fist_weapon = 4, MELEE, MELEE_ATTR
+    two_handed_sword = 0, MELEE, MELEE_ATTR, "sword"
+    one_handed_sword = 1, MELEE, MELEE_ATTR, "sword"
+    dagger = 2, MELEE, MELEE_ATTR, "dagger"
+    staff = 3, MAGIC, MAGIC_ATTR, "staff"
+    fist_weapon = 4, MELEE, MELEE_ATTR, "fist"
