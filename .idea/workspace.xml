@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90411130-d707-49bc-b0aa-dd2026fb5fa0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Equipment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/Weapon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enums/Attributes.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/Attributes.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enums/EquipmentTier.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/EquipmentTier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enums/Stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/enums/Stats.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/Weapon.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/Weapon.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,7 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/game_v1$Equipment.coverage" NAME="Equipment Coverage Results" MODIFIED="1540063894760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
+    <SUITE FILE_PATH="coverage/game_v1$Weapon.coverage" NAME="Weapon Coverage Results" MODIFIED="1540070567024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/model" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="481171235">
@@ -29,22 +31,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="25" />
+          <entry key="py" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="25" />
+          <entry key="Python" value="26" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="1952" />
+          <entry key="py" value="3503" />
+          <entry key="txt" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="1952" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="3503" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -60,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/enums/Stats.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -69,7 +73,7 @@
         <entry file="file://$PROJECT_DIR$/enums/WeaponType.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="374">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -110,22 +114,35 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/Equipment.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+            <state relative-caret-position="561">
+              <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding>
-                <element signature="e#0#31#0" expanded="true" />
-                <marker date="1540064049686" expanded="true" signature="109:114" ph="..." />
+                <element signature="e#0#51#0" expanded="true" />
+                <marker date="1540066405490" expanded="true" signature="144:148" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/Weapon.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#31#0" expanded="true" />
+                <element signature="e#189#432#0" />
+                <element signature="e#527#965#0" />
+                <element signature="e#1046#1083#0" />
+                <element signature="e#1373#1906#0" />
+                <marker date="1540070545986" expanded="true" signature="1195:1263" ph="..." />
+                <marker date="1540070545986" expanded="true" signature="1289:1354" ph="..." />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -146,14 +163,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GameHandler.py" />
-        <option value="$PROJECT_DIR$/enums/Attributes.py" />
         <option value="$PROJECT_DIR$/enums/ArmourType.py" />
-        <option value="$PROJECT_DIR$/enums/WeaponType.py" />
         <option value="$PROJECT_DIR$/enums/Rarity.py" />
-        <option value="$PROJECT_DIR$/enums/EquipmentTier.py" />
-        <option value="$PROJECT_DIR$/enums/Stats.py" />
         <option value="$PROJECT_DIR$/mode/Equipment.py" />
         <option value="$PROJECT_DIR$/model/Equipment.py" />
+        <option value="$PROJECT_DIR$/enums/WeaponType.py" />
+        <option value="$PROJECT_DIR$/enums/Stats.py" />
+        <option value="$PROJECT_DIR$/enums/Attributes.py" />
+        <option value="$PROJECT_DIR$/enums/EquipmentTier.py" />
         <option value="$PROJECT_DIR$/model/Weapon.py" />
       </list>
     </option>
@@ -221,7 +238,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.Weapon">
     <configuration name="Equipment" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="game_v1" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -244,8 +261,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Weapon" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="game_v1" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/model" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/model/Weapon.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Equipment" />
+      <item itemvalue="Python.Weapon" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Weapon" />
         <item itemvalue="Python.Equipment" />
       </list>
     </recent_temporary>
@@ -264,11 +308,49 @@
       <option name="presentableId" value="Default" />
       <updated>1539976446893</updated>
     </task>
+    <task id="LOCAL-00001" summary="Interface weapon part 1">
+      <created>1540064094112</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1540064094112</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Interface weapon part 1">
+      <created>1540067467391</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1540067467391</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24010417" />
+      <window_info id="Structure" order="1" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
+      <window_info id="Favorites" order="2" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3993644" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32944915" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.32944915" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32944915" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+    <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6885593" visible="true" weight="0.24010417" />
       <window_info id="Structure" order="1" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
       <window_info id="Favorites" order="2" sideWeight="0.31144068" side_tool="true" weight="0.24010417" />
@@ -290,7 +372,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -334,21 +416,18 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Interface weapon part 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Interface weapon part 1" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/GameHandler.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/Attributes.py">
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/interface/interface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/enums/ArmourType.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        <state relative-caret-position="202">
+          <caret line="100" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>
@@ -359,10 +438,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/enums/ArmourType.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/enums/WeaponType.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enums/Stats.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/enums/Attributes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/model/Equipment.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="12" lean-forward="true" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#51#0" expanded="true" />
+            <marker date="1540066405490" expanded="true" signature="144:148" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -373,23 +484,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/enums/Stats.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/Weapon.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/model/Equipment.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="415">
+          <caret line="65" column="26" selection-start-line="65" selection-start-column="26" selection-end-line="65" selection-end-column="26" />
           <folding>
             <element signature="e#0#31#0" expanded="true" />
-            <marker date="1540064049686" expanded="true" signature="109:114" ph="..." />
+            <element signature="e#189#432#0" />
+            <element signature="e#527#965#0" />
+            <element signature="e#1046#1083#0" />
+            <element signature="e#1373#1906#0" />
+            <marker date="1540070545986" expanded="true" signature="1195:1263" ph="..." />
+            <marker date="1540070545986" expanded="true" signature="1289:1354" ph="..." />
           </folding>
         </state>
       </provider>
