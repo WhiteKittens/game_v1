@@ -78,7 +78,7 @@ class Character:
         if 100 - self.character_full_stats[Attributes.critical_strike_chance] <= random.randint(0, 100) and \
                 self.character_full_stats[Attributes.critical_strike_chance] != 0:
             min_role = self.character_level + 14
-            critical_multiplier = self.character_full_stats[Attributes.critical_strike_multiplier]
+            critical_multiplier = 70 + self.character_full_stats[Attributes.critical_strike_multiplier]
             critical_splat = "Critical"
         phys_dmg = round(((random.randint(min_role, self.character_level + 14) * 15 * self.character_full_stats[
             Stats.Strength] / 20)) * (1 + critical_multiplier/100))
