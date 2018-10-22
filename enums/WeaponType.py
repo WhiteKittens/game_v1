@@ -5,10 +5,10 @@ from enums.Attributes import Attributes
 MELEE = [Stats.Strength, Stats.Stamina, Stats.Agility]
 MAGIC = [Stats.Stamina, Stats.Strength, Stats.Intelligence]
 
-MELEE_ATTR = [Attributes.global_damage_multiplier, Attributes.poison, Attributes.critical_strike_chance,
+MELEE_ATTR = [Attributes.poison, Attributes.critical_strike_chance,
               Attributes.critical_strike_multiplier, Attributes.life_steal, Attributes.elemental_conversion,
-              Attributes.elemental_bonus]
-MAGIC_ATTR = [Attributes.global_damage_multiplier, Attributes.poison, Attributes.critical_strike_chance,
+              Attributes.elemental_bonus, Attributes.armor_penetration]
+MAGIC_ATTR = [Attributes.poison, Attributes.critical_strike_chance,
               Attributes.critical_strike_multiplier, Attributes.life_steal, Attributes.elemental_conversion,
               Attributes.elemental_bonus]
 
@@ -27,7 +27,7 @@ class WeaponType(Enum):
     @classmethod
     def get_two_handed_weapons(cls):
         return_list = []
-        for weapon in list(WeaponType):
+        for weapon in list(cls):
             if weapon.value[5] != 1:
                 return_list.append(weapon)
         return return_list

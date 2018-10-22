@@ -3,6 +3,7 @@ from enums.WeaponType import WeaponType
 from enums.Stats import Stats
 from enums.Attributes import Attributes
 from model.Weapon import Weapon
+import random
 
 
 class Character:
@@ -17,6 +18,12 @@ class Character:
         self.equipped_items = []
         self.init_equipment_slots()
         self.init_stats()
+
+        self.character_level = 100
+        self.hp = 0
+        self.energy = 0
+        self.max_hp = 0
+        self.max_energy = 0
 
     def init_equipment_slots(self):
         for equipment_slot in range(self.AMOUNT_OF_EQUIPMENT_SLOTS):
@@ -53,9 +60,10 @@ class Character:
         self.init_stats()
         for item in self.equipped_items:
             if item is not None:
+                print(item.get_stats_and_attr())
                 for stat in item.get_stats_and_attr():
                     self.character_full_stats[stat] += item.get_stats_and_attr()[stat][1]
-        return
+        self.calc_max_hp()
 
     def print_character_stats(self):
         for stat in self.character_full_stats:
@@ -63,10 +71,32 @@ class Character:
                 print("%-28s  : %4d" % (stat.name.replace("_", " "), self.character_full_stats[stat]))
         return
 
+    def calc_dmg_unrefined(self):
+        min_role = 5
+        critical_multiplier = 0
+        critical_splat = ""
+        if 100 - self.character_full_stats[Attributes.critical_strike_chance] <= random.randint(0, 100) and \
+                self.character_full_stats[Attributes.critical_strike_chance] != 0:
+            min_role = self.character_level + 14
+            critical_multiplier = self.character_full_stats[Attributes.critical_strike_multiplier]
+            critical_splat = "Critical"
+        phys_dmg = round(((random.randint(min_role, self.character_level + 14) * 15 * self.character_full_stats[
+            Stats.Strength] / 20)) * (1 + critical_multiplier/100))
+        elemental_dmg = phys_dmg * self.character_full_stats[Attributes.elemental_bonus] + phys_dmg \
+                        * self.character_full_stats[Attributes.elemental_conversion]
+        phys_dmg *= (100 - self.character_full_stats[Attributes.elemental_conversion])
+        return critical_splat, phys_dmg, elemental_dmg
+
+    def calc_max_hp(self):
+
+        self.max_hp = (self.character_full_stats[Stats.Strength] * 632) + (self.character_full_stats[
+                                                                              Stats.Stamina] * 63) + 976 * \
+                      self.character_level + 11111
+        print(self.max_hp)
+        print(self.calc_dmg_unrefined())
 
 
-
-weapon = Weapon(False)
+weapon = Weapon(False, 100, 100)
 character = Character("my char")
 character.add_to_inventory(weapon)
 character.equip_item(weapon)

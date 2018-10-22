@@ -17,3 +17,4 @@ class Attributes(Enum):
     elemental_resistance = 12, 1
     elemental_bonus = 13, 1
     armor_penetration = 14, 1
+    life = 15, 45

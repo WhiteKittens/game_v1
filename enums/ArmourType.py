@@ -4,7 +4,7 @@ from enums.Attributes import Attributes
 
 STATS = [Stats.Stamina, Stats.Agility, Stats.Intelligence, Stats.Strength]
 ATTR = [Attributes.armour, Attributes.energy_regen, Attributes.evasion_rating, Attributes.max_energy,
-        Attributes.poison_resist, Attributes.elemental_resistance]
+        Attributes.poison_resist, Attributes.elemental_resistance, Attributes.life]
 
 
 class Rarity(Enum):

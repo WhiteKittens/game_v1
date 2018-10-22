@@ -79,8 +79,4 @@ class Weapon:
         return self.equipment_type
 
     def get_stats_and_attr(self):
-        return dict(self.equipment_stats.items() | self.equipment_attributes.items())
-
-
-weapon = Weapon(False, 99, 1)
-weapon.print_weapon()
+        return dict(self.equipment_attributes.items() | self.equipment_stats.items())
