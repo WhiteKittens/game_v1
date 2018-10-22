@@ -1,19 +1,25 @@
 from enums.GameClasses import GameClasses
 from enums.WeaponType import WeaponType
-from enums import *
+from model.Weapon import Weapon
 
 
 class Character:
-    def __init__(self, character_name, character_class):
+    AMOUNT_OF_EQUIPMENT_SLOTS = 5
+
+    def __init__(self, character_name, character_class=GameClasses.warrior):
         self.character_class = character_class
         self.character_name = character_name
         self.character_inventory = []
-        self.equipment = []
-        self.equipment[2] = "hallo"
+        self.equiped_items = []
+        self.init_equipment_slots()
+
+    def init_equipment_slots(self):
+        for equipment_slot in range(self.AMOUNT_OF_EQUIPMENT_SLOTS):
+            self.equiped_items[equipment_slot] = None
 
     def equip_item(self, item):
-        pass
+        if item.get_equipment_type in WeaponType.get_two_handed_weapons(WeaponType):
 
 
-print(GameClasses.warrior.value[1])
-c = Character("help", GameClasses.warrior)
+
+print(WeaponType.two_handed_sword)

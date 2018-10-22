@@ -24,6 +24,7 @@ class Weapon:
         self.initialise_name()
         self.initialise_stats_and_attributes()
         self.print_weapon()
+
     def initialise_rarity(self):
         """
         initialises rarity by making a list of all rarities
@@ -64,7 +65,7 @@ class Weapon:
     def print_stats(stats):
         for attr in stats:
             print("\t%10s\t%-30s:\t%d" % (stats[attr][0].value[3], attr.name.lower()
-                                     , stats[attr][1]))
+                                          , stats[attr][1]))
 
     def print_weapon(self):
         print(self.equipment_name)
@@ -72,6 +73,7 @@ class Weapon:
         self.print_stats(self.equipment_stats)
         self.print_stats(self.equipment_attributes)
 
-
+    def get_equipment_type(self):
+        return self.equipment_type
 
 weapon = Weapon(False)

@@ -9,10 +9,11 @@ class Attributes(Enum):
     energy_regen = 4, 1
     max_energy = 5, 1
     percent_life = 6, 1
-    armour = 7, 1
+    armor = 7, 1
     evasion_rating = 8, 1
     poison = 9, 1
     poison_resist = 10, 1
     elemental_conversion = 11, 1
     elemental_resistance = 12, 1
     elemental_bonus = 13, 1
+    armor_penetration = 14, 1
