@@ -24,8 +24,10 @@ class WeaponType(Enum):
     fist_weapon = 4, MELEE, MELEE_ATTR, 0, "fist", 0
     axe = 5, MELEE, MELEE_ATTR, 0, "axe", 1
 
-    def get_two_handed_weapons(self):
+    @classmethod
+    def get_two_handed_weapons(cls):
         return_list = []
-        for weapon in list(self):
+        for weapon in list(WeaponType):
             if weapon.value[5] == 1:
                 return_list.append(weapon)
+        return return_list

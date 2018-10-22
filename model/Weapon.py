@@ -23,7 +23,6 @@ class Weapon:
         self.initialise_type()
         self.initialise_name()
         self.initialise_stats_and_attributes()
-        self.print_weapon()
 
     def initialise_rarity(self):
         """
@@ -75,5 +74,9 @@ class Weapon:
 
     def get_equipment_type(self):
         return self.equipment_type
+
+    def get_stats_and_attr(self):
+        return dict(self.equipment_stats.items() | self.equipment_attributes.items())
+
 
 weapon = Weapon(False)
