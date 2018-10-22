@@ -23,8 +23,7 @@ class Weapon:
         self.initialise_type()
         self.initialise_name()
         self.initialise_stats_and_attributes()
-        self.print_attributes()
-
+        self.print_weapon()
     def initialise_rarity(self):
         """
         initialises rarity by making a list of all rarities
@@ -40,7 +39,7 @@ class Weapon:
         self.equipment_type = random.choice(list(WeaponType))
 
     def initialise_name(self):
-        self.equipment_name = self.equipment_type.value[3]
+        self.equipment_name = self.equipment_type.value[4]
 
     def initialise_stats_and_attributes(self):
         stats = random.sample(self.equipment_type.value[1], self.rarity.value[2])
@@ -61,10 +60,18 @@ class Weapon:
         value = round(random.randint(tier.value[2][0], tier.value[2][1]) * stat.value[1])
         return tier, value
 
-    def print_attributes(self):
-        for attr in self.equipment_stats:
-            print("%s\t%s:\t%d" % (self.equipment_stats[attr][0].value[3], attr.name.lower()
-                                    , self.equipment_stats[attr][1]))
+    @staticmethod
+    def print_stats(stats):
+        for attr in stats:
+            print("\t%10s\t%-30s:\t%d" % (stats[attr][0].value[3], attr.name.lower()
+                                     , stats[attr][1]))
+
+    def print_weapon(self):
+        print(self.equipment_name)
+        print(self.rarity)
+        self.print_stats(self.equipment_stats)
+        self.print_stats(self.equipment_attributes)
+
 
 
 weapon = Weapon(False)
