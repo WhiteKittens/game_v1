@@ -64,6 +64,8 @@ class Character:
         return
 
 
+
+
 weapon = Weapon(False)
 character = Character("my char")
 character.add_to_inventory(weapon)

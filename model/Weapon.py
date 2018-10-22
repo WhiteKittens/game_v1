@@ -34,7 +34,7 @@ class Weapon:
         """
         rarity = []
         for rar in list(Rarity):
-            if rar.value[4] <= self.item_level and rar.value[4] >= self.floor_rarity:
+            if self.floor_rarity <= rar.value[4] <= self.item_level:
                 rarity += [rar] * rar.value[1]
         self.rarity = random.choice(rarity)
 
@@ -49,7 +49,7 @@ class Weapon:
         attributes = random.sample(self.equipment_type.value[2], self.rarity.value[3])
         tier_list = []
         for tier in list(EquipmentTier):
-            if tier.value[4] <= self.item_level and tier.value[4] >= self.floor_rarity:
+            if self.floor_rarity <= tier.value[4] <= self.item_level:
                 tier_list += ([tier] * tier.value[1])
 
         for stat in stats:
@@ -58,10 +58,9 @@ class Weapon:
         for attribute in attributes:
             self.equipment_attributes[attribute] = self.get_tuple_value_weapon_stats(tier_list, attribute)
 
-    @staticmethod
-    def get_tuple_value_weapon_stats(tier_list, stat):
+    def get_tuple_value_weapon_stats(self, tier_list, stat):
         tier = random.choice(tier_list)
-        value = round(random.randint(tier.value[2][0], tier.value[2][1]) * stat.value[1])
+        value = round(random.randint(tier.value[2][0], tier.value[2][1]) * stat.value[1] * self.equipment_type.value[5])
         return tier, value
 
     @staticmethod
@@ -83,5 +82,5 @@ class Weapon:
         return dict(self.equipment_stats.items() | self.equipment_attributes.items())
 
 
-weapon = Weapon(False)
+weapon = Weapon(False, 99, 1)
 weapon.print_weapon()
