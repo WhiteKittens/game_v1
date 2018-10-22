@@ -7,10 +7,12 @@ import random
 
 class Weapon:
 
-    def __init__(self, full_import):
-        self.rarity = Rarity.game_breaker
+    def __init__(self, full_import, item_level=100, floor_rarity=0):
+        self.floor_rarity = floor_rarity
+        self.item_level = item_level
+        self.rarity = Rarity.Game_breaker
         self.equipment_name = ""
-        self.equipment_type = Rarity.game_breaker
+        self.equipment_type = Rarity.Game_breaker
         self.equipment_stats = dict()
         self.equipment_attributes = dict()
 
@@ -30,9 +32,10 @@ class Weapon:
         containing them once for each percentage of chance at getting them
         :return: None
         """
-        rarity = ([Rarity.common] * Rarity.common.value[1]) + ([Rarity.uncommon] * Rarity.uncommon.value[1]) \
-                 + ([Rarity.rare] * Rarity.rare.value[1]) + ([Rarity.legendary] * Rarity.legendary.value[1])
-
+        rarity = []
+        for rar in list(Rarity):
+            if rar.value[4] <= self.item_level and rar.value[4] >= self.floor_rarity:
+                rarity += [rar] * rar.value[1]
         self.rarity = random.choice(rarity)
 
     def initialise_type(self):
@@ -46,7 +49,8 @@ class Weapon:
         attributes = random.sample(self.equipment_type.value[2], self.rarity.value[3])
         tier_list = []
         for tier in list(EquipmentTier):
-            tier_list += ([tier] * tier.value[1])
+            if tier.value[4] <= self.item_level and tier.value[4] >= self.floor_rarity:
+                tier_list += ([tier] * tier.value[1])
 
         for stat in stats:
             self.equipment_stats[stat] = self.get_tuple_value_weapon_stats(tier_list, stat)
@@ -68,7 +72,7 @@ class Weapon:
 
     def print_weapon(self):
         print(self.equipment_name)
-        print(self.rarity)
+        print(self.rarity.name)
         self.print_stats(self.equipment_stats)
         self.print_stats(self.equipment_attributes)
 
@@ -80,3 +84,4 @@ class Weapon:
 
 
 weapon = Weapon(False)
+weapon.print_weapon()

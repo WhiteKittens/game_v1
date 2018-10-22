@@ -41,6 +41,7 @@ class Character:
 
     def de_equip_item(self, item):
         self.equipped_items[item.get_equipment_type().value[3]] = None
+        self.recalculate_stats()
 
     def init_stats(self):
         for stat in list(Stats):
@@ -49,6 +50,7 @@ class Character:
             self.character_full_stats[attribute] = 0
 
     def recalculate_stats(self):
+        self.init_stats()
         for item in self.equipped_items:
             if item is not None:
                 for stat in item.get_stats_and_attr():
@@ -62,10 +64,10 @@ class Character:
         return
 
 
-
-
 weapon = Weapon(False)
 character = Character("my char")
 character.add_to_inventory(weapon)
 character.equip_item(weapon)
+character.print_character_stats()
+character.de_equip_item(weapon)
 character.print_character_stats()
