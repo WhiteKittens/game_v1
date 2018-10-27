@@ -3,9 +3,9 @@ from enum import Enum
 
 class SoloNPC(Enum):
     """
-    id, level
+    id, level, hp, phys_dmg_red, ele_dmg,red, damage
     """
-    snake = 0, 1
+    snake = 0, 1, 50000, 70, 100, (0, 21)
 
     @classmethod
     def get_random_npc_two_levels_range(cls, level):
